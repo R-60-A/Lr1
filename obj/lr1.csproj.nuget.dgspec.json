@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\proga\\c#\\lr1\\lr1.csproj": {}
+    "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\lr1.csproj": {}
   },
   "projects": {
-    "d:\\proga\\c#\\lr1\\lr1.csproj": {
+    "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\lr1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\proga\\c#\\lr1\\lr1.csproj",
+        "projectUniqueName": "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\lr1.csproj",
         "projectName": "lr1",
-        "projectPath": "d:\\proga\\c#\\lr1\\lr1.csproj",
+        "projectPath": "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\lr1.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "d:\\proga\\c#\\lr1\\obj\\",
+        "outputPath": "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config"

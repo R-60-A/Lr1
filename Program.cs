@@ -5,7 +5,14 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    public class Game
+    
+    /*  
+        winnerName – імя переможця
+        looserName – ім'я програвшого
+        rating – рейтинг на який грали
+        index  – індекс гри
+    */ 
+    public class Game 
     {
         public string winnerName;
         public string looserName;
@@ -13,7 +20,7 @@ namespace Program
         public int rating;
         public int index;
 
-        public Game(string winnerName, string looserName,int rating,int index){
+        public Game(string winnerName, string looserName,int rating,int index){//конструктор класу
             this.winnerName = winnerName;
             this.looserName = looserName;
             this.rating = rating;
@@ -21,6 +28,15 @@ namespace Program
         }
     }
 
+    /*  
+        UserName – Імя користувача
+        CurrentRating – Рейтинг користувача
+        GamesCount – Кількість зіграних партій
+        stats - список об'єктів класу Game
+        WinGame  – функція яка визивається у випадку перемоги
+        LoseGame – функція яка визивається у випадку поразки
+        GetStats – функція яка показує історію ігор
+    */ 
     public class GameAccount
     {
         
@@ -35,7 +51,11 @@ namespace Program
             this.CurrentRating = 10;
             this.GamesCount = 0;
         }
-
+        /*  
+            у CurrentRating додається рейтинг на який грали,
+            збільшується кількість ігор GamesCount,
+            створюється об'єкт класу Game та додається у список stats
+        */ 
         public void WinGame(string opponentName, int Rating){
             this.CurrentRating+=Rating;
             this.GamesCount++;
@@ -44,6 +64,11 @@ namespace Program
             stats.Add(gm);
         }
 
+        /*  
+            CurrentRating зменшується у тому випадку, якшо він більший за Rating на який грали,
+            збільшується кількість ігор GamesCount,
+            створюється об'єкт класу Game та додається у список stats
+        */
         public void LoseGame(string opponentName, int Rating){
             if(this.CurrentRating>Rating){
                 this.CurrentRating-=Rating;
@@ -56,7 +81,11 @@ namespace Program
             Game gm = new Game(opponentName, this.UserName, Rating, this.GamesCount-1);
             stats.Add(gm);
         }
-
+        
+        /*  
+            виводяться дані кожного об'єкту у списку stats, а саме
+            UserName, index, rating, winnerName, looserName
+        */
         public void GetStats(){
              for (int i = 0; i < this.stats.Count; i++){
                 Console.WriteLine("\nUSERNAME - " + this.UserName);
@@ -70,6 +99,16 @@ namespace Program
     class Program
     {
 
+        /*  
+            імітація гри
+            реалізована завдяки класу Random
+            
+            user1 - перший гравець
+            user2 - другий гравець
+            rating - рейтинг на який грають
+
+            у випадку негативного рейтингу викликається помилка
+        */
         public static void playGame(GameAccount user1,GameAccount user2, int rating){
             if(rating>=0){
                 Random rnd = new Random();
@@ -91,13 +130,17 @@ namespace Program
         }
         public static void Main(string[] args)
         {
+            
+            //створення двох об'єктів класу GameAccount
             GameAccount user1 = new GameAccount("Grysha");
             GameAccount user2 = new GameAccount("Mysha");
 
+            //імітація гри
             playGame(user1,user2,-2);
             playGame(user1,user2,6);    
             playGame(user1,user2,8);
 
+            //вивід статистики
             user1.GetStats();
             user2.GetStats();
 

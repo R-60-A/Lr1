@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\proga\\c#\\lr1\\lr1.csproj",
+      "projectUniqueName": "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\lr1.csproj",
       "projectName": "lr1",
-      "projectPath": "D:\\proga\\c#\\lr1\\lr1.csproj",
+      "projectPath": "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\lr1.csproj",
       "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-      "outputPath": "D:\\proga\\c#\\lr1\\obj\\",
+      "outputPath": "c:\\Users\\asus\\Documents\\GitHub\\Lr1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
